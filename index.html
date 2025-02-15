@@ -9,17 +9,15 @@
   </head>
   <body>
     <main>
-    <div style="display: flex; justify-content: center;"> 
-    <iframe src="https://vidsrc.me/embed/tv?imdb=tt6741278&season=1&episode=1" style="width: 50%; height: 100%;" id = "vidplay" frameborder="10" referrerpolicy="origin" allowfullscreen></iframe>
-    </div>
+    <div align="center"><iframe src="https://vidsrc.me/embed/tv?imdb=tt6741278&season=1&episode=1" id = "vidplay" referrerpolicy="origin" allowfullscreen></iframe></div>
     <style>
     .seselect {
 
-    width: 150px;
+    width: 75px;
     
-    height: 50px;
+    height: 25px;
 
-    background-color: darkblue; /* Green background */
+    background-color: darkgray; /* Green background */
 
     color: white;
 
@@ -31,18 +29,18 @@
 
     font-weight: bolder !important;
     
-    font-size: 30px !important;
+    font-size: 12px !important;
     
     text-align: center;
     </style>
     <style>
     .epselect {
 
-    width: 150px;
+    width: 75px;
     
-    height: 50px;
+    height: 25px;
 
-    background-color: darkblue; /* Green background */
+    background-color: darkgray; /* Green background */
 
     color: white;
 
@@ -54,9 +52,18 @@
 
     font-weight: bolder !important;
     
-    font-size: 30px !important;
+    font-size: 12px !important;
     
     text-align: center;
+    </style>
+    <style>
+    #vidplay {
+    position: absolute;
+
+    top: 0px;
+
+    left: 0px;
+    }
     </style>
     </main>
     <script src="sketch.js"></script>
