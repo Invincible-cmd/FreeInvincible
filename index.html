@@ -65,6 +65,32 @@
     left: 0px;
     }
     </style>
+    <script>
+  const iframe = document.getElementById("vidplay");
+
+  // Wait for the iframe content to load
+  iframe.addEventListener("load", function () {
+    const iframeWindow = iframe.contentWindow;
+    const iframeDocument = iframe.contentDocument || iframeWindow.document;
+
+    // Add a click event listener inside the iframe
+    iframeDocument.body.addEventListener("click", function (event) {
+      const target = event.target;
+
+      // Check if the target is a link (anchor tag) or has a clickable action
+      if (target.tagName === 'A' || target.closest('a')) {
+        const link = target.tagName === 'A' ? target : target.closest('a');
+        
+        // If the link has a valid href attribute (and it doesn't point to the same URL)
+        const href = link.href;
+        if (href && href !== iframeWindow.location.href) {
+          event.preventDefault(); // Prevent the default click action (redirect)
+          alert("Redirect blocked!");
+        }
+      }
+    });
+  });
+</script>
     </main>
     <script src="sketch.js"></script>
   </body>
