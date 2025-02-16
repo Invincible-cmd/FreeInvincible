@@ -22,7 +22,7 @@ function setup() {
   selectEpisode.option("Episode 6");
   selectEpisode.option("Episode 7");
   selectEpisode.option("Episode 8");
-  selectSeason.changed(content);
+
   selectEpisode.changed(content);
 
 }
@@ -32,13 +32,15 @@ function content() {
   se = selectSeason.selected();
   e = ep.replace("Episode ", "")
   s = se.replace("Season ", "")
-  seasons = s
-  episodes = e
-  iFrame.src = "https://vidsrc.me/embed/tv?imdb=tt6741278&season=" + seasons + "&episode=" + episodes
   iFrame.width = windowWidth/1.2
   iFrame.height = windowHeight/1.2
   iFrame.style.top = windowHeight/10.8 + "px"
   iFrame.style.left = windowWidth/11.8 + "px"
+  seasons = s
+  episodes = e
+  iFrame.src = "https://vidsrc.me/embed/tv?imdb=tt6741278&season=" + seasons + "&episode=" + episodes
+
+  
 }
 
 function draw() {
@@ -46,6 +48,7 @@ function draw() {
   background(20);
   fill(40);
   rect(windowWidth/2,windowHeight/2 + 5,windowWidth / 1.2 + 50,windowHeight / 1.2 + 50, 20, 20, 20, 20)
+  content()
 }
 
 
