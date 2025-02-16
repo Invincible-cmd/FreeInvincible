@@ -24,6 +24,7 @@ function setup() {
   selectEpisode.option("Episode 8");
 
   selectEpisode.changed(content);
+  selectSeason.changed(content);
 
 }
 function content() {
@@ -48,7 +49,6 @@ function draw() {
   background(20);
   fill(40);
   rect(windowWidth/2,windowHeight/2 + 5,windowWidth / 1.2 + 50,windowHeight / 1.2 + 50, 20, 20, 20, 20)
-  content()
 }
 
 
