@@ -49,6 +49,10 @@ function draw() {
   fill(40);
   rect(windowWidth/2,windowHeight/2 + 5,windowWidth / 1.2 + 50,windowHeight / 1.2 + 50, 20, 20, 20, 20)
   content()
+  window.addEventListener('beforeunload', function (event) {
+    event.preventDefault();
+    event.returnValue = '';
+  });
 }
 
 
