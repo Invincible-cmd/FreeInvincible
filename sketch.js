@@ -35,15 +35,13 @@ function content() {
   seasons = s
   episodes = e
   iFrame.src = "https://vidsrc.me/embed/tv?imdb=tt6741278&season=" + seasons + "&episode=" + episodes
-
-  
-}
-
-function draw() {
   iFrame.width = windowWidth/1.2
   iFrame.height = windowHeight/1.2
   iFrame.style.top = windowHeight/10.8 + "px"
   iFrame.style.left = windowWidth/11.8 + "px"
+}
+
+function draw() {
   resizeCanvas(windowWidth, windowHeight);
   background(20);
   fill(40);
