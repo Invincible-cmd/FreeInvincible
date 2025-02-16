@@ -2,6 +2,7 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   background(0)
   rectMode(CENTER)
+  load = false
   index = 1
   seasons = "1"
   episodes = "1"
@@ -49,6 +50,10 @@ function draw() {
   background(20);
   fill(40);
   rect(windowWidth/2,windowHeight/2 + 5,windowWidth / 1.2 + 50,windowHeight / 1.2 + 50, 20, 20, 20, 20)
+  if (load == false) {
+    content()
+    load = true
+  }
 }
 
 
