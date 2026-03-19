@@ -12,6 +12,8 @@ function setup() {
   selectSeason.option("Season 1");
   selectSeason.option("Season 2");
   selectSeason.option("Season 3");
+  selectSeason.option("Season 4");
+
   selectEpisode = createSelect();
   selectEpisode.class("epselect")
   selectEpisode.position(77 + 40, 15)
